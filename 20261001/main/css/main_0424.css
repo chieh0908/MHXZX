@@ -1,0 +1,2288 @@
+/*---- common ----*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&display=swap");
+@import url("https://ids.iwplay.com.tw/includ/footer/footer.css");
+
+/*---- basic ----*/
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+}
+
+ul,
+ol {
+  margin-bottom: 0;
+  text-align: justify;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  word-break: break-all;
+  background: #fff;
+}
+
+aside,
+header,
+nav,
+section {
+  font-family: "Noto Serif TC", serif, sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+section {
+  padding-top: 35px;
+}
+
+.title {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.btn {
+  border: initial;
+  border-radius: initial;
+  background-color: initial;
+  transition: initial;
+}
+
+.btn.focus,
+.btn:focus {
+  box-shadow: initial;
+}
+
+.close,
+.close:hover,
+.close:not(:disabled):not(.disabled):focus,
+.close:not(:disabled):not(.disabled):hover {
+  text-shadow: initial;
+  opacity: 1;
+}
+
+/*---- snslink ----*/
+aside {
+  position: fixed;
+  top: 60%;
+  right: 0;
+  transform: translateY(-50%);
+  pointer-events: initial;
+  z-index: 5;
+}
+
+.sp {
+  position: absolute;
+  top: -68%;
+  right: -17%;
+}
+
+aside.hide {
+  pointer-events: none;
+}
+
+aside .inner {
+  border: 1px solid #8e714d;
+  position: relative;
+  display: inline-block;
+  width: 160px;
+  height: 310px;
+  right: 0;
+  text-align: center;
+  background: #f2f2f2;
+  transition: 0.5s;
+}
+
+aside.hide .inner {
+  right: -160px;
+}
+
+aside .qrcode {
+  margin-top: 10px;
+}
+
+aside .qrcode span {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #686c6e;
+  font-size: 18px;
+  line-height: initial;
+  letter-spacing: 1.5px;
+}
+
+aside .link {
+  position: relative;
+  margin-top: 10px;
+  margin-left: 20px;
+  text-align: left;
+}
+
+aside .link a,
+aside .link a:hover {
+  display: block;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+aside .link a:hover span {
+  color: #d21f2d;
+}
+
+aside .link a img {
+  border-radius: 50%;
+  display: inline-block;
+  margin: 3px auto;
+  width: 32px;
+  background: #838e94;
+  transition: 0.5s;
+}
+
+aside .link a:hover img {
+  background: #d21f2d;
+}
+
+aside .link a span {
+  margin-left: 12px;
+  color: #686c6e;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+aside .btn {
+  position: relative;
+  display: inline-block;
+  width: 37px;
+  height: 310px;
+  background: url(../images/snslink/snslink_btn_bg.jpg) no-repeat center top;
+  background-size: cover;
+  vertical-align: top;
+  pointer-events: initial;
+  transition: 0.5s;
+}
+
+aside .btn:hover {
+  filter: brightness(1.1);
+}
+
+aside .btn::before {
+  content: "";
+  position: absolute;
+  display: block;
+  margin-top: 10px;
+  width: 16px;
+  height: 77px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url(../images/snslink/snslink_btn_hide.png) no-repeat center top;
+}
+
+aside.hide .btn::before {
+  background: url(../images/snslink/snslink_btn_open.png) no-repeat center top;
+}
+
+/*---- nav ----*/
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+
+nav .container {
+  position: relative;
+  height: 45px;
+  background: #fff;
+}
+
+.iw_logo {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav .menu {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav ul li {
+  position: relative;
+  display: inline-block;
+  margin-left: 40px;
+  text-align: right;
+}
+
+nav ul li a {
+  display: block;
+  padding-bottom: 0.3rem;
+  color: #5c5c5c;
+  font-size: 18px;
+  font-weight: 600;
+  user-select: none;
+  transition: 0.5s;
+}
+
+nav ul li.active a,
+nav ul li:hover a {
+  color: #d21f2d;
+  text-decoration: none;
+}
+
+.open_menu,
+.snslink {
+  display: none;
+}
+
+/*---- header ----*/
+header {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: url(../images/bg_home_250424.jpg) no-repeat top center;
+  background-size: cover;
+}
+
+.sec_bg,
+.sec_bg video,
+.video_bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.sec_bg video,
+.video_bg {
+  object-fit: cover;
+  z-index: 1;
+}
+
+header .container {
+  position: relative;
+  padding: 0;
+  text-align: center;
+  max-width: initial;
+}
+
+.logo {
+  position: absolute;
+  top: 3.5rem;
+}
+
+.slogan {
+  position: relative;
+  margin: 0 auto;
+}
+
+.btn_video {
+  position: absolute;
+  left: -6%;
+  top: 70%;
+}
+
+.pulse {
+  animation: pulse infinite 2s ease-in-out alternate;
+  position: relative;
+  transition: 0.6s;
+  z-index: 2;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bottom {
+  position: relative;
+  margin: 0 auto;
+  margin-top: -10%;
+  z-index: 2;
+}
+
+.bottom_bg {
+  position: relative;
+  margin: 0 auto;
+}
+
+.download {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.qrcode,
+.apk,
+.install_info {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.qrcode {
+  max-width: 155px;
+}
+
+.apk {
+  margin-left: 0.5rem;
+  max-width: 380px;
+  width: 100%;
+}
+
+.apk a {
+  display: inline-block;
+  margin: 0.25rem;
+  text-align: center;
+}
+
+.apk a.left {
+  width: 50%;
+}
+
+.apk a.right {
+  width: 42%;
+}
+
+.install_info {
+  border-radius: 5px;
+  margin-left: 5px;
+  padding-top: 20px;
+  width: 30px;
+  height: 125px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 20px;
+  background: linear-gradient(0deg, #af052d, #f03025);
+  transition: 0.5s;
+}
+
+.install_info:hover {
+  color: #fff;
+  text-decoration: none;
+  filter: brightness(1.1);
+}
+
+/*---- main ----*/
+main {
+  margin-top: -15%;
+  padding: 12% 0 0;
+  position: relative;
+  background: url(../images/content_bg.png) no-repeat center top;
+  background-size: cover;
+  z-index: 1;
+}
+
+/*---- version ----*/
+.version {
+  position: relative;
+  padding: 45px 0;
+  overflow: hidden;
+}
+
+.version .title {
+  margin: 0 auto;
+  margin-bottom: -1.5rem;
+  margin-top: 3rem;
+}
+
+.new_version {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: -3rem;
+}
+
+.version_content_bg img {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.version_content_bg img.mob {
+  display: none;
+}
+
+.version_content {
+  position: absolute;
+  max-width: 1000px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.version_content .nav {
+  margin: 0 auto;
+  margin-bottom: 1%;
+  padding: 0.5rem;
+}
+
+.version_content .nav-link {
+  border: 1px solid #9b7041;
+  padding: 0.6rem;
+  color: #9b7041;
+  text-align: center;
+  background: url(../images/tabbg.jpg) no-repeat center bottom #fff;
+  align-content: center;
+  align-items: center;
+  min-height: 54px;
+}
+
+.version_content .nav-link span {
+  margin-right: 5px;
+  color: #9b7041;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.version_content .nav-link.active {
+  color: #fff;
+  background: #9b7041;
+}
+
+.version_content .nav-link.active span {
+  color: #fff;
+}
+
+.tab-pane {
+  vertical-align: top;
+}
+
+.version_content h3 {
+  color: #9b7041;
+  font-weight: 700;
+  text-align: center;
+}
+
+.v_content {
+  font-size: 17px;
+  line-height: 28px;
+  text-align: justify;
+}
+
+.v_content p {
+  text-indent: 2rem;
+}
+
+/*---- news_list ----*/
+.news {
+  padding: 35px 0;
+}
+
+.news .title {
+  margin: 0 auto;
+  margin-top: -3rem;
+  margin-bottom: -1rem;
+}
+
+.news_contnet {
+  position: relative;
+  margin: 40px auto;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.4);
+}
+
+.news_list {
+  height: 100%;
+  background: url(../images/news_list_bg.jpg) no-repeat center bottom;
+  background-size: cover;
+}
+
+#news_list {
+  margin-top: -20px;
+  padding: 15px 18px 0;
+}
+
+.system-more {
+  position: relative;
+}
+
+.system-more .news_title,
+.system-more .more {
+  position: absolute;
+  display: inline-block;
+  margin-top: -5px;
+  left: 24%;
+  top: 50%;
+  color: #fff;
+  transform: translateY(-50%);
+}
+
+.system-more .news_title {
+  color: #fff;
+  font-size: 26px;
+  user-select: none;
+}
+
+.system-more .more {
+  margin-top: 0;
+  left: initial;
+  right: 20px;
+  font-size: 20px;
+}
+
+.system-more .more:hover {
+  text-decoration: none;
+}
+
+.system-more .more::after {
+  content: "";
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: -2px;
+  width: 20px;
+  height: 20px;
+  background: url(../images/more_icon.png) no-repeat center top;
+  background-size: cover;
+  transition: 0.5s;
+}
+
+.system-more .more:hover::after {
+  transform: rotate(180deg);
+}
+
+#news_list ul {
+  list-style: none;
+}
+
+#news_list ul li {
+  display: block;
+  width: 100%;
+}
+
+#news_list ul li a {
+  border-bottom: 1px solid rgba(182, 144, 92, 0.2);
+  display: block;
+  padding: 12px 0;
+  color: #686c6e;
+  letter-spacing: 0;
+  transition: 0.5s;
+}
+
+#news_list ul li a:hover {
+  color: #686c6e;
+  text-decoration: none;
+  background: linear-gradient(
+    90deg,
+    rgba(207, 192, 117, 0.38),
+    rgba(207, 192, 117, 0)
+  );
+}
+
+#news_list span.system-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+#news_list .systemtime {
+  display: block;
+  font-size: 14px;
+  text-align: right;
+  letter-spacing: 0.5px;
+}
+
+.news_btn {
+  padding: 15px 18px;
+}
+
+.news_btn a img {
+  transition: 0.5s;
+}
+
+.news_btn a img:hover {
+  filter: brightness(1.1);
+}
+
+.latestnews,
+.newsdetails {
+  padding: 35px 0;
+  background: url(../images/news_content_bg.jpg) no-repeat center top;
+  background-size: cover;
+}
+
+.latestnews-titleurl {
+  border-bottom: 1px solid rgba(182, 144, 92, 0.2);
+  display: block;
+  padding: 15px;
+  width: 100%;
+  color: #5c5c5c;
+  transition: 0.5s;
+}
+
+.latestnews-titleurl:hover {
+  color: #5c5c5c;
+  text-decoration: none;
+  background: linear-gradient(
+    90deg,
+    rgba(249, 220, 185, 0.8),
+    rgba(249, 220, 185, 0)
+  );
+}
+
+.latestnews-title {
+  display: -webkit-box;
+  margin-bottom: 0;
+  font-size: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+.newsdetails-badge,
+.newsdetails-newsbadge,
+.newsdetails-sysbadge,
+.newsdetails-actbadge {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 4px 10px;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.newsdetails-newsbadge {
+  border: 1px solid #e51737;
+  background: #e51737;
+}
+
+.newsdetails-sysbadge {
+  border: 1px solid #007ac8;
+  background: #007ac8;
+}
+
+.newsdetails-actbadge {
+  border: 1px solid #66950b;
+  background: #66950b;
+}
+
+.latestnews-title .newsdetails-newsbadge {
+  border: 1px solid #e51737;
+  background: #e51737;
+}
+
+.newstime {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 14px;
+  text-align: left;
+  opacity: 0.8;
+}
+
+.morebtn {
+  font-size: 12px;
+  text-align: right;
+}
+
+/*---- news_content ----*/
+.news_banner img {
+  width: 100%;
+}
+
+/*.newsdetails .newsdetails-contents img {
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+}*/
+.newsdetails .newsdetails-contents table {
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+}
+
+.newsdetails-title {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.newsdetails .newsdetails-titleurl {
+  padding-top: 5px;
+}
+
+.newsdetails-badge {
+  font-size: 16px;
+}
+
+.newsdetails-contents {
+  margin-top: 2rem;
+  font-family: Microsoft JhengHei, Arial, sans-serif;
+}
+
+.newsdetails-contents h3 {
+  margin: 1.5rem 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #e51737;
+}
+
+.newsdetails .newsdetails-contents p {
+  margin: 1rem 0;
+  text-align: justify;
+}
+
+.newsdetails .newsdetails-contents a {
+  color: #5f89b8;
+  font-weight: bold;
+}
+
+.newsdetails .newsdetails-contents table td {
+  padding: 10px;
+  background: #fff;
+}
+
+.newsdetails .newsdetails-contents table tr:first-child td {
+  color: #fff;
+  font-weight: bold;
+  background: #5f89b8;
+}
+
+.newsdetails .newsdetails-contents table td p {
+  margin: 10px auto;
+}
+
+.newsdetails .backto {
+  margin: 60px 0;
+}
+
+.newsdetails .backto a {
+  display: block;
+  margin: 0 auto;
+  padding: 15px 30px;
+  max-width: 200px;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(90deg, #68aef1, #cfd8ff);
+  transition: 0.5s;
+}
+
+.newsdetails .backto a:hover {
+  text-decoration: none;
+  filter: brightness(1.1);
+}
+
+/*---- pagination ----*/
+.pagination ul {
+  display: flex;
+  margin: 80px auto 50px;
+  font-family: Microsoft JhengHei, Arial, sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.pagination ul li a {
+  border: 1px solid #d6373d;
+  margin: 5px;
+  padding: 12px 17px;
+  color: #d6373d;
+  font-weight: bold;
+  transition: 0.5s ease-in-out;
+}
+
+.pagination ul li a:hover,
+.pagination ul li.active a {
+  border: 1px solid #d6373d;
+  color: #fff;
+  text-decoration: none;
+  background: #d6373d;
+}
+
+/*---- menpai ----*/
+.menpai {
+  position: relative;
+  height: 900px;
+  overflow: hidden;
+}
+
+.menpai .title {
+  position: relative;
+  z-index: 2;
+}
+
+.chara {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.chara_content {
+  display: none;
+}
+
+.chara_content.on {
+  display: block !important;
+}
+
+.menpai .sec_bg video {
+  z-index: 1;
+}
+
+.menpai .sec_bg video,
+.video_bg {
+  margin-left: -300px;
+}
+
+#chara01 .video_bg {
+  background: url(../images/menpai01.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara02 .video_bg {
+  background: url(../images/menpai02.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara03 .video_bg {
+  background: url(../images/menpai03.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara04 .video_bg {
+  background: url(../images/menpai04.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara05 .video_bg {
+  background: url(../images/menpai05.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara06 .video_bg {
+  background: url(../images/menpai06.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara07 .video_bg {
+  background: url(../images/menpai07.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#chara08 .video_bg {
+  background: url(../images/menpai08.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.menpai .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+  background: url(../images/menpai.png) no-repeat center bottom;
+  background-size: cover;
+  z-index: 3;
+}
+
+.chara_img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+#chara01 .chara_img {
+  background: url(../images/menpai/chara01.png) no-repeat right center;
+  background-size: cover;
+}
+
+#chara02 .chara_img {
+  background: url(../images/menpai/chara02.png) no-repeat right center;
+  background-size: cover;
+}
+
+#chara03 .chara_img {
+  background: url(../images/menpai/chara03.png) no-repeat right center;
+  background-size: cover;
+}
+
+#chara04 .chara_img {
+  background: url(../images/menpai/chara04.png) no-repeat right center;
+  background-size: cover;
+}
+
+#chara05 .chara_img {
+  background: url(../images/menpai/chara05.png) no-repeat right center;
+  background-size: cover;
+}
+
+#chara06 .chara_img {
+  background: url(../images/menpai/chara06.png) no-repeat right center;
+  background-size: cover;
+}
+
+#chara07 .chara_img {
+  background: url(../images/menpai/chara07.png) no-repeat right center;
+  background-size: cover;
+}
+
+#chara08 .chara_img {
+  background: url(../images/menpai/chara08.png) no-repeat right center;
+  background-size: cover;
+}
+
+#chara09 .chara_img {
+  background: url(../images/menpai/chara09.png) no-repeat right center;
+  background-size: cover;
+}
+
+#chara10 .chara_img {
+  background: url(../images/menpai/chara10.png) no-repeat right center;
+  background-size: cover;
+}
+
+#chara11 .chara_img {
+  background: url(../images/menpai/chara11.png) no-repeat right center;
+  background-size: cover;
+}
+
+.chara_content.on .chara_img {
+  animation: fadeleft 0.7s forwards;
+}
+
+@keyframes fadeleft {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.chara_img img {
+  width: initial;
+}
+
+.chara_intro {
+  position: absolute;
+  max-width: 580px;
+  left: 50%;
+  bottom: 140px;
+  text-align: center;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: 4;
+}
+
+.chara_content.on .chara_intro {
+  animation: fadeTn 0.5s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeTn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.chara_intro::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 740px;
+  height: 481px;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url(../images/menpai/chara_intro_shadow.png) no-repeat center top;
+  z-index: -1;
+}
+
+.chara_title {
+  margin: 0 auto;
+  max-width: 350px;
+}
+
+.chara_intro p {
+  margin: 20px auto;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.chara_icon {
+  position: absolute;
+  max-width: 840px;
+  width: 100%;
+  bottom: 40px;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+
+.chara_icon li {
+  display: inline-block;
+  margin: 0 -2px;
+}
+
+.chara_icon li a {
+  display: block;
+  position: relative;
+  width: 78px;
+  height: 78px;
+}
+
+.chara_icon li:nth-child(1) a {
+  background: url(../images/menpai/chara_icon01.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(1) a {
+  background: url(../images/menpai/chara_icon01_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(2) a {
+  background: url(../images/menpai/chara_icon02.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(2) a {
+  background: url(../images/menpai/chara_icon02_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(3) a {
+  background: url(../images/menpai/chara_icon03.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(3) a {
+  background: url(../images/menpai/chara_icon03_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(4) a {
+  background: url(../images/menpai/chara_icon04.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(4) a {
+  background: url(../images/menpai/chara_icon04_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(5) a {
+  background: url(../images/menpai/chara_icon05.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(5) a {
+  background: url(../images/menpai/chara_icon05_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(6) a {
+  background: url(../images/menpai/chara_icon06.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(6) a {
+  background: url(../images/menpai/chara_icon06_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(7) a {
+  background: url(../images/menpai/chara_icon07.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(7) a {
+  background: url(../images/menpai/chara_icon07_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(8) a {
+  background: url(../images/menpai/chara_icon08.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(8) a {
+  background: url(../images/menpai/chara_icon08_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(9) a {
+  background: url(../images/menpai/chara_icon09.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(9) a {
+  background: url(../images/menpai/chara_icon09_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(10) a {
+  background: url(../images/menpai/chara_icon10.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(10) a {
+  background: url(../images/menpai/chara_icon10_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li:nth-child(11) a {
+  background: url(../images/menpai/chara_icon11.png) no-repeat center top;
+  background-size: cover;
+}
+
+.chara_icon li.active:nth-child(11) a {
+  background: url(../images/menpai/chara_icon11_active.png) no-repeat center top;
+  background-size: cover;
+}
+
+/*---- features ----*/
+.features {
+  position: relative;
+  padding: 2.5rem 0;
+  background: url(../images/features.jpg) no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.features .title {
+  margin: 0 auto;
+}
+
+.features_content {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+}
+
+.reel {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  pointer-events: none;
+}
+
+#features_banner {
+  position: absolute;
+  margin-top: -2px;
+  padding: 0 7%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-control-prev {
+  left: 0.5rem;
+}
+
+.carousel-control-next {
+  right: 0.5rem;
+}
+
+/*---- gameinfo ----*/
+.gameinfo {
+  padding: 2rem 0;
+  background: url(../images/gameinfo_bg.jpg) no-repeat center top;
+  background-size: cover;
+}
+
+.gameinfo .icon {
+  margin: 0 auto;
+  max-width: 190px;
+}
+
+.gameinfo h3 {
+  margin: 15px auto;
+  color: #d6373d;
+  font-weight: 900;
+}
+
+.gameinfo .game {
+  user-select: none;
+}
+
+.gameinfo p {
+  margin-bottom: 0;
+  color: #000;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0.5px;
+}
+
+.gameinfo .customer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.gameinfo .customer .google_play img {
+  padding: 0.25rem;
+  width: 54%;
+}
+
+.gameinfo .customer .app_store img {
+  padding: 0.25rem;
+  padding-left: 0;
+  width: 44%;
+}
+
+.gameinfo .btn {
+  display: block;
+  margin: 0.25rem;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 20px;
+  background: linear-gradient(30deg, #af052d, #f03025);
+  transition: 0.5s;
+  width: 99%;
+}
+
+.gameinfo .btn:hover {
+  filter: brightness(1.1);
+}
+
+/*---- 彈窗廣告 ----*/
+.pop-ads {
+  display: none;
+  overflow: hidden;
+}
+
+.pop-ads img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+/*---- footer ----*/
+footer {
+  color: #000;
+  background: #fff;
+}
+
+footer p,
+footer ul,
+footer li {
+  opacity: 1;
+}
+
+footer .company {
+  margin-right: 5px;
+}
+
+@media (max-width: 1600px) {
+  .title {
+    max-width: 400px;
+  }
+
+  .menpai .sec_bg video {
+    margin-left: -150px;
+  }
+
+  .menpai .mask {
+    right: -300px;
+    background: url(../images/menpai.png) no-repeat right bottom;
+  }
+
+  .chara_intro {
+    bottom: 120px;
+  }
+
+  .chara_intro p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .chara_title {
+    max-width: 260px;
+  }
+
+  .chara_icon li a {
+    width: 70px;
+    height: 70px;
+  }
+
+  .sec_role2 {
+    right: 4%;
+    top: 2%;
+  }
+}
+
+@media (max-width: 1500px) {
+  .v_content {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  #chara01 .chara_img {
+    background: url(../images/menpai/chara01.png) no-repeat 60% center;
+    background-size: cover;
+  }
+
+  #chara02 .chara_img {
+    background: url(../images/menpai/chara02.png) no-repeat 60% center;
+    background-size: cover;
+  }
+
+  #chara03 .chara_img {
+    background: url(../images/menpai/chara03.png) no-repeat 60% center;
+    background-size: cover;
+  }
+
+  #chara04 .chara_img {
+    background: url(../images/menpai/chara04.png) no-repeat 60% center;
+    background-size: cover;
+  }
+
+  #chara05 .chara_img {
+    background: url(../images/menpai/chara05.png) no-repeat 60% center;
+    background-size: cover;
+  }
+
+  #chara06 .chara_img {
+    background: url(../images/menpai/chara06.png) no-repeat 60% center;
+    background-size: cover;
+  }
+
+  #chara07 .chara_img {
+    background: url(../images/menpai/chara07.png) no-repeat 60% center;
+    background-size: cover;
+  }
+
+  #chara08 .chara_img {
+    background: url(../images/menpai/chara08.png) no-repeat 60% center;
+    background-size: cover;
+  }
+
+  #chara09 .chara_img {
+    background: url(../images/menpai/chara09.png) no-repeat 60% center;
+    background-size: cover;
+  }
+
+  #chara10 .chara_img {
+    background: url(../images/menpai/chara10.png) no-repeat 60% center;
+    background-size: cover;
+  }
+
+  #chara11 .chara_img {
+    background: url(../images/menpai/chara11.png) no-repeat 60% center;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 1300px) {
+  .slogan {
+    padding-top: 5%;
+  }
+
+  .menpai {
+    height: 600px;
+  }
+
+  .chara_intro {
+    max-width: 450px;
+    bottom: 90px;
+  }
+
+  .chara_title {
+    max-width: 230px;
+  }
+
+  .chara_intro p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .chara_icon {
+    bottom: 15px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #news_list ul li a {
+    padding: 7.5px 0;
+  }
+
+  .gameinfo .icon {
+    max-width: 200px;
+  }
+
+  .gameinfo .game {
+    margin-left: 20px;
+  }
+
+  .gameinfo h3 {
+    margin: 10px auto;
+  }
+
+  .gameinfo p {
+    line-height: initial;
+  }
+
+  footer {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .version_content {
+    max-width: 900px;
+  }
+
+  .v_content {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .v_content h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  aside {
+    display: none;
+  }
+
+  nav .menu {
+    position: fixed;
+    padding-right: 0;
+    top: -100%;
+    right: initial;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    background: #fff;
+    transform: initial;
+    transition: 0.5s top;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  nav .menu.open {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    top: 45px;
+    left: 0;
+    opacity: 1;
+    transition: 0.5s top;
+  }
+
+  nav .menu.open ul {
+    padding: 10px 40px;
+    width: 100%;
+  }
+
+  nav .menu.open ul li {
+    display: block;
+    margin-left: initial;
+    text-align: left;
+  }
+
+  nav .menu.open ul li a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 16px;
+    transition: inherit;
+  }
+
+  nav .menu.open ul li:last-child {
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .snslink {
+    position: relative;
+    display: block;
+    padding: 0 40px;
+    text-align: right;
+  }
+
+  .snslink::before {
+    content: "社群";
+    display: block;
+    position: absolute;
+    top: 50%;
+    color: #5c5c5c;
+    font-size: 16px;
+    font-family: "Noto Serif TC", serif, sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transform: translateY(-50%);
+  }
+
+  .snslink a {
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px 0;
+    background: #838e94;
+  }
+
+  .open_menu {
+    position: absolute;
+    display: inline-block;
+    right: 15px;
+    width: 30px;
+    height: 45px;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .open_menu span.btn {
+    display: block;
+    position: relative;
+    margin-top: 12px;
+    opacity: 1;
+  }
+
+  .open_menu .btn span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #838e94;
+    border-radius: 10px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+  }
+
+  .open_menu .btn span:nth-child(1) {
+    top: 0px;
+    transform-origin: left center;
+  }
+
+  .open_menu .btn span:nth-child(2) {
+    top: 8px;
+    transform-origin: left center;
+  }
+
+  .open_menu .btn span:nth-child(3) {
+    top: 16px;
+    transform-origin: left center;
+  }
+
+  .open_menu.close .btn span:nth-child(1) {
+    top: -2px;
+    left: 5px;
+    transform: rotate(45deg);
+  }
+
+  .open_menu.close .btn span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+
+  .open_menu.close .btn span:nth-child(3) {
+    top: 19px;
+    left: 5px;
+    transform: rotate(-45deg);
+  }
+
+  header {
+    padding-bottom: 7%;
+  }
+
+  .logo {
+    margin: 0 auto;
+    max-width: 200px;
+  }
+
+  .slogan {
+    padding-top: 6%;
+  }
+
+  .btn_video img {
+    max-width: 80px;
+  }
+
+  main {
+    margin-top: -20%;
+    padding: 12% 0 0;
+  }
+
+  .bottom_bg,
+  .download .qrcode,
+  .install_info {
+    display: none;
+  }
+
+  .download {
+    position: relative;
+    margin: 10px auto;
+    top: initial;
+    left: initial;
+    transform: initial;
+  }
+
+  .apk {
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+
+  .apk a.iw-track-click {
+    display: none;
+  }
+
+  .version .title,
+  .news .title {
+    margin: 0 auto;
+  }
+
+  .version_content_bg,
+  .version_content_bg img {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .version_content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 575px;
+    height: 100%;
+    top: 10px;
+    transform: translateX(-50%);
+  }
+
+  .version_content_bg .md {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .version_content .nav {
+    margin: 10% auto 2%;
+  }
+
+  .version_content .nav-link {
+    padding: 0.3rem;
+  }
+
+  .version_content .nav-link span {
+    margin-right: 0;
+    display: block;
+  }
+
+  .v_content h3 {
+    font-size: 22px;
+    letter-spacing: 0;
+  }
+
+  .news_contnet {
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    max-width: 720px;
+    box-shadow: initial;
+  }
+
+  #ubanner_A {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 15px;
+  }
+
+  .news_list {
+    margin-top: 20px;
+    height: initial;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 15px;
+  }
+
+  .system-more img {
+    width: 100%;
+  }
+
+  .news_btn {
+    margin: 0 auto;
+    max-width: 540px;
+    text-align: center;
+  }
+
+  .news_banner {
+    padding-top: 45px;
+  }
+
+  .menpai {
+    height: 1080px;
+    background: url(../images/menpai_m.jpg) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara01 .chara_img {
+    background: url(../images/menpai/chara01_m.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara02 .chara_img {
+    background: url(../images/menpai/chara02_m.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara03 .chara_img {
+    background: url(../images/menpai/chara03_m.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara04 .chara_img {
+    background: url(../images/menpai/chara04_m.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara05 .chara_img {
+    background: url(../images/menpai/chara05_m.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara06 .chara_img {
+    background: url(../images/menpai/chara06_m.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara07 .chara_img {
+    background: url(../images/menpai/chara07_m.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara08 .chara_img {
+    background: url(../images/menpai/chara08_m.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara09 .chara_img {
+    background: url(../images/menpai/chara09_m.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara10 .chara_img {
+    background: url(../images/menpai/chara10_m.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara11 .chara_img {
+    background: url(../images/menpai/chara11_m.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  .chara_content.on .chara_img {
+    animation: fadetop 0.7s forwards;
+  }
+
+  @keyframes fadetop {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .chara_shadow {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    left: 0;
+    bottom: 0;
+    background: url(../images/menpai/shadow.png) no-repeat center 80%;
+    background-size: cover;
+  }
+
+  .chara_intro {
+    padding: 0 40px;
+    max-width: 600px;
+    width: 100%;
+    bottom: 100px;
+  }
+
+  .chara_intro::before {
+    display: none;
+  }
+
+  .chara_title {
+    max-width: 300px;
+  }
+
+  .chara_intro p {
+    color: #000;
+    font-weight: 600;
+  }
+
+  .features_content {
+    margin: 20px auto 50px;
+  }
+
+  .gameinfo .container {
+    max-width: 520px;
+  }
+
+  .gameinfo .icon {
+    max-width: 160px;
+  }
+
+  .gameinfo .game {
+    margin: 20px auto 0;
+    text-align: center;
+  }
+
+  .gameinfo .customer {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 992px) {
+  .container {
+    max-width: 962px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .news_contnet {
+    margin: 20px auto;
+    max-width: 550px;
+  }
+
+  #news_list .system-title {
+    text-align: left;
+  }
+
+  #news_list .systemtime {
+    text-align: right;
+  }
+
+  .latestnews-title {
+    -webkit-line-clamp: 2;
+  }
+
+  .menpai {
+    height: 950px;
+  }
+
+  .chara_icon {
+    max-width: 500px;
+  }
+
+  .chara_icon li {
+    margin: -4px -2px;
+  }
+
+  .chara_intro {
+    bottom: 150px;
+  }
+
+  .chara_shadow {
+    background-position: center bottom;
+  }
+
+  .feature {
+    width: 66%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .version_content {
+    padding: 0 7%;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .version_content .nav {
+    margin: 10% auto 0;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .v_content {
+    padding-right: 10px;
+    height: 30vw;
+    font-size: 15px;
+    line-height: 24px;
+    overflow-y: auto;
+  }
+
+  .v_content::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .v_content::-webkit-scrollbar-track {
+    background: none;
+    border-radius: 10px;
+  }
+
+  .v_content::-webkit-scrollbar-thumb {
+    background-color: #ba9460;
+    border-radius: 10px;
+  }
+
+  .feature {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  section {
+    padding: 20px 0;
+  }
+
+  header {
+    padding-top: 165%;
+    background: url(../images/bg_home_m_250424.jpg) no-repeat center top;
+    background-size: cover;
+  }
+
+  .title {
+    max-width: 280px;
+  }
+
+  .logo,
+  .slogan {
+    display: none;
+  }
+
+  #video .btn_video {
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+
+  #video:hover .btn_video {
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+
+  .download {
+    margin: 0 auto;
+  }
+
+  main {
+    margin-top: -28%;
+    padding: 20% 0 0;
+  }
+
+  .version_content {
+    top: -5px;
+  }
+
+  .version_content .nav-link {
+    /* 選單短文案 */
+    /* padding: 0.3rem 0.8rem; */
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    height: 100%;
+  }
+
+  .version_content .nav-link span {
+    display: none;
+  }
+
+  .v_content {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .v_content h3 {
+    font-size: 18px;
+  }
+
+  .news {
+    padding: 20px 0;
+  }
+
+  .news_list {
+    margin-top: 10px;
+  }
+
+  .news_contnet {
+    margin-top: 0;
+  }
+
+  #news_list {
+    padding: 10px 12px 0;
+  }
+
+  #news_list ul li a {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  #news_list .systemtime {
+    font-size: 12px;
+  }
+
+  .system-more .news_title,
+  .system-more .more {
+    margin-top: -8px;
+  }
+
+  .system-more .news_title {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .system-more .more {
+    right: 10px;
+    font-size: 16px;
+  }
+
+  .system-more .more::after {
+    width: 16px;
+    height: 16px;
+  }
+
+  .news_btn {
+    padding: 10px;
+  }
+
+  .news_banner {
+    padding-bottom: 0;
+  }
+
+  .latestnews,
+  .newsdetails {
+    padding: 20px 0;
+  }
+
+  .latestnews-title {
+    font-size: 16px;
+  }
+
+  .newsdetails-newsbadge,
+  .newsdetails-sysbadge,
+  .newsdetails-actbadge {
+    font-size: 14px;
+  }
+
+  .latestnews-details {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .pagination ul {
+    margin: 50px auto 30px;
+  }
+
+  .pagination ul li a {
+    margin: 4px;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .menpai {
+    height: auto;
+  }
+
+  .chara {
+    position: initial;
+  }
+
+  .chara_shadow {
+    bottom: 0;
+    background-size: 100%;
+  }
+
+  .chara_intro {
+    position: relative;
+    margin-top: 75%;
+    padding: 0 15px;
+    bottom: initial;
+  }
+
+  .chara_title {
+    max-width: 220px;
+  }
+
+  .chara_icon {
+    position: relative;
+    max-width: 400px;
+    bottom: initial;
+  }
+
+  .chara li a {
+    width: 60px;
+    height: 60px;
+  }
+
+  .features .container {
+    padding: 0;
+  }
+
+  .features_content {
+    margin: 10px auto;
+    width: 100%;
+  }
+
+  .game_btn {
+    margin: 20px auto 35px;
+  }
+
+  .gameinfo h3 {
+    font-size: 22px;
+  }
+
+  .gameinfo p {
+    font-size: 14px;
+  }
+
+  .gameinfo .btn {
+    padding: 12px 0;
+    font-size: 16px;
+  }
+
+  .pop-ads {
+    margin: auto;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .version_content_bg img.pad {
+    display: none;
+  }
+
+  .version_content_bg img.mob {
+    display: block;
+  }
+
+  .version_content {
+    top: 0;
+  }
+
+  .v_content {
+    height: 45vw;
+  }
+
+  .chara_shadow {
+    background-size: 135%;
+  }
+}
+
+@media (max-width: 400px) {
+  .chara_shadow {
+    background-size: 150%;
+  }
+}
+
+@media (max-width: 370px) {
+  .system-more .news_title {
+    font-size: 18px;
+  }
+
+  .system-more .more {
+    font-size: 14px;
+  }
+
+  .system-more .more::after {
+    width: 14px;
+    height: 14px;
+  }
+
+  .pagination ul {
+    margin: 40px auto 20px;
+  }
+
+  .pagination ul li a {
+    margin: 3px;
+    padding: 0.5rem 0.6rem;
+  }
+
+  .chara_shadow {
+    background-size: 180%;
+  }
+
+  footer .grading img {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 340px) {
+  nav .menu {
+    height: 320px;
+  }
+
+  nav .menu.open ul li a,
+  .snslink::before {
+    font-size: 14px;
+  }
+
+  .snslink a {
+    margin: 5px 2px;
+    max-width: 35px;
+  }
+
+  main {
+    margin-top: -40%;
+    padding: 23% 0 0;
+  }
+
+  .v_content {
+    height: 43vw;
+  }
+
+  .chara_title {
+    max-width: 180px;
+  }
+
+  .chara_intro p {
+    margin: 10px auto;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .chara_icon li a {
+    width: 45px;
+    height: 45px;
+  }
+
+  footer .company img {
+    margin: 8px 3px;
+  }
+}
